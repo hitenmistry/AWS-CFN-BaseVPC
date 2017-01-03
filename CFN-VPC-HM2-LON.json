@@ -454,8 +454,16 @@
               [
                 "#!/bin/bash\n",
                 "yum update -y\n",
-                "yum install -y httpd php mysql-server php-mysqlnd",
-                "service httpd start"
+                "yum install -y httpd php mysql-server php-mysqlnd\n",
+                "service httpd start\n",
+                "chkconfig httpd on\n",
+                "groupadd www\n",
+                "usermod -a -G www ec2-user\n",
+                "chown -R root:www /var/www\n",
+                "chmod 2775 /var/www\n",
+                "find /var/www -type d -exec chmod 2775 {} +\n",
+                "find /var/www -type f -exec chmod 0664 {} +\n",
+                "echo \"<?php phpinfo(); ?>\" > /var/www/html/phpinfo.php\n"
               ]
             ]
           }
