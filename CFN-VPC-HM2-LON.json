@@ -463,7 +463,7 @@
                 "chmod 2775 /var/www\n",
                 "find /var/www -type d -exec chmod 2775 {} +\n",
                 "find /var/www -type f -exec chmod 0664 {} +\n",
-                "echo 2phpinfo > /var/www/html/phpinfo.php\n"
+                "echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php\n"
               ]
             ]
           }
