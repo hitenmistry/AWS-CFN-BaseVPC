@@ -41,9 +41,7 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [
-          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
-        ],
+        "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -199,7 +197,6 @@
           "y": 710
         },
         "z": 0,
-        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -464,7 +461,7 @@
                 "chmod 2775 /var/www\n",
                 "find /var/www -type d -exec chmod 2775 {} +\n",
                 "find /var/www -type f -exec chmod 0664 {} +\n",
-                "echo \"<?php phpinfo(); ?>\" > /var/www/html/phpinfo.php\n"
+                "echo &quot;<?php phpinfo(); ?>&quot; > /var/www/html/phpinfo.php\n"
               ]
             ]
           }
