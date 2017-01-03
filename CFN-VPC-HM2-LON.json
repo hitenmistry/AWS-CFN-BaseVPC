@@ -13,6 +13,7 @@
         },
         "z": 0,
         "embeds": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624",
           "3a28cc68-37c3-492d-9d11-6c038506aed3",
           "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
           "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
@@ -41,9 +42,7 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [
-          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
-        ],
+        "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -199,7 +198,6 @@
           "y": 710
         },
         "z": 0,
-        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -230,6 +228,7 @@
           "y": 420
         },
         "z": 0,
+        "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
         "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d"
@@ -454,7 +453,9 @@
               "",
               [
                 "#!/bin/bash\n",
-                "yum update -y\n"
+                "yum update -y\n",
+                "yum install -y httpd php mysql-server php-mysqlnd",
+                "service httpd start"
               ]
             ]
           }
