@@ -538,5 +538,41 @@
         "EC2VPCZS3T"
       ]
     }
+  },
+  "Outputs": {
+    "PHPInfoURL": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "EC2I52RW5",
+                "PublicIp"
+              ]
+            },
+            "/phpinfo.php"
+          ]
+        ]
+      },
+      "Description": "Installation URL of the phpinfo page"
+    },
+    "WebsiteURL": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "EC2I52RW5",
+                "PublicIp"
+              ]
+            }
+          ]
+        ]
+      }
+    }
   }
 }
