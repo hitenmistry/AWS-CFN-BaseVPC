@@ -1,0 +1,527 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "30a2c413-18bc-4101-be3c-9cedd516c67d": {
+        "size": {
+          "width": 140,
+          "height": 140
+        },
+        "position": {
+          "x": 530,
+          "y": 280
+        },
+        "z": 0,
+        "embeds": [
+          "3a28cc68-37c3-492d-9d11-6c038506aed3",
+          "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
+          "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        ]
+      },
+      "4d827669-4e33-4f18-8c7e-8167bcedc6eb": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 700,
+          "y": 290
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76": {
+        "size": {
+          "width": 140,
+          "height": 140
+        },
+        "position": {
+          "x": 450,
+          "y": 540
+        },
+        "z": 0,
+        "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
+        "embeds": [
+          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
+        ],
+        "dependson": [
+          "30a2c413-18bc-4101-be3c-9cedd516c67d",
+          "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        ]
+      },
+      "a74290b2-118b-4148-ad37-ad6c1b63cfb9": {
+        "source": {
+          "id": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        },
+        "target": {
+          "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        },
+        "z": 2
+      },
+      "98a8a2d3-8ca1-42b8-a989-17c4c445d020": {
+        "source": {
+          "id": "d8ac1c80-6531-445d-ad5d-84b52c56dae0"
+        },
+        "target": {
+          "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        },
+        "z": 3
+      },
+      "3a28cc68-37c3-492d-9d11-6c038506aed3": {
+        "size": {
+          "width": 140,
+          "height": 140
+        },
+        "position": {
+          "x": 850,
+          "y": 280
+        },
+        "z": 0,
+        "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
+        "embeds": [
+          "f4a92465-70ed-4af9-8204-c15c6bd48e51"
+        ],
+        "dependson": [
+          "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
+          "4d827669-4e33-4f18-8c7e-8167bcedc6eb",
+          "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        ]
+      },
+      "94cab19b-41aa-47ba-b150-e8946a9b26f9": {
+        "source": {
+          "id": "6c25da36-a4f1-4bbe-b87e-2035b767be3d"
+        },
+        "target": {
+          "id": "d8ac1c80-6531-445d-ad5d-84b52c56dae0"
+        },
+        "z": 4
+      },
+      "fb1e9ad8-dab4-4908-a81d-b4814621ce63": {
+        "source": {
+          "id": "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        },
+        "target": {
+          "id": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        },
+        "z": 5
+      },
+      "84e22e15-ff9e-45ff-9c38-8fcc2543c6d0": {
+        "source": {
+          "id": "2a40a03a-0095-4cad-bf17-3ad8ca91a0c8"
+        },
+        "target": {
+          "id": "4d827669-4e33-4f18-8c7e-8167bcedc6eb"
+        },
+        "z": 11
+      },
+      "c3701e0d-652a-41eb-b8ae-1d11fabae784": {
+        "source": {
+          "id": "4d827669-4e33-4f18-8c7e-8167bcedc6eb"
+        },
+        "target": {
+          "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        },
+        "z": 0
+      },
+      "f4a92465-70ed-4af9-8204-c15c6bd48e51": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 750,
+          "y": 370
+        },
+        "z": 0,
+        "parent": "3a28cc68-37c3-492d-9d11-6c038506aed3",
+        "embeds": [],
+        "references": [
+          "4d827669-4e33-4f18-8c7e-8167bcedc6eb"
+        ],
+        "dependson": [
+          "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        ],
+        "isrelatedto": [
+          "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        ]
+      },
+      "893fd1be-3449-48e2-9fcc-06936ad12f58": {
+        "source": {
+          "id": "f4a92465-70ed-4af9-8204-c15c6bd48e51"
+        },
+        "target": {
+          "id": "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        },
+        "z": 11
+      },
+      "7fc38c9d-36d4-409a-9188-de9ffdd619ab": {
+        "size": {
+          "width": 140,
+          "height": 140
+        },
+        "position": {
+          "x": 1040,
+          "y": 540
+        },
+        "z": 0,
+        "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
+        "embeds": [],
+        "dependson": [
+          "30a2c413-18bc-4101-be3c-9cedd516c67d",
+          "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        ]
+      },
+      "f1ee7ab6-d48d-4c74-9f2e-bba6e1551c08": {
+        "source": {
+          "id": "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        },
+        "target": {
+          "id": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        },
+        "z": 0
+      },
+      "cccbf76c-10b9-40df-baa4-6fe50a7ca47a": {
+        "source": {
+          "id": "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        },
+        "target": {
+          "id": "7fc38c9d-36d4-409a-9188-de9ffdd619ab"
+        },
+        "z": 0
+      },
+      "ad9764c1-d871-4e74-ab29-e04bd28738ae": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 450,
+          "y": 710
+        },
+        "z": 0,
+        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
+        "embeds": [],
+        "ismemberof": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        ],
+        "dependson": [
+          "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        ],
+        "isrelatedto": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        ]
+      },
+      "c10ca1a7-af03-4495-9738-cbf489322c3b": {
+        "source": {
+          "id": "ad9764c1-d871-4e74-ab29-e04bd28738ae"
+        },
+        "target": {
+          "id": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        },
+        "z": 11
+      },
+      "409a18f6-4d1b-422b-85fb-c60ad8826624": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 210,
+          "y": 420
+        },
+        "z": 0,
+        "embeds": [],
+        "dependson": [
+          "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        ]
+      },
+      "7a0a50dc-d14a-470e-b1c5-4b12727e98e1": {
+        "source": {
+          "id": "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        },
+        "target": {
+          "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        },
+        "z": 11
+      }
+    }
+  },
+  "Resources": {
+    "EC2VPCZS3T": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "192.168.0.0/16",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        }
+      }
+    },
+    "EC2IG1XY3K": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-IGW"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "4d827669-4e33-4f18-8c7e-8167bcedc6eb"
+        }
+      }
+    },
+    "EC2S2VAGH": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "EC2VPCZS3T"
+        },
+        "MapPublicIpOnLaunch": "TRUE",
+        "CidrBlock": "192.168.1.0/24",
+        "AvailabilityZone": {
+          "Fn::Select": [
+            "1",
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-SN-PUBb"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76"
+        }
+      },
+      "DependsOn": [
+        "EC2VPCZS3T",
+        "EC2RT100DP"
+      ]
+    },
+    "EC2RT100DP": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "EC2VPCZS3T"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-RTB"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "3a28cc68-37c3-492d-9d11-6c038506aed3"
+        }
+      },
+      "DependsOn": [
+        "EC2IG1XY3K",
+        "EC2VPCZS3T"
+      ]
+    },
+    "EC2VPCG252GL": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "InternetGatewayId": {
+          "Ref": "EC2IG1XY3K"
+        },
+        "VpcId": {
+          "Ref": "EC2VPCZS3T"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "c3701e0d-652a-41eb-b8ae-1d11fabae784"
+        }
+      }
+    },
+    "EC2R4HAQJ": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "EC2RT100DP"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "EC2IG1XY3K"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f4a92465-70ed-4af9-8204-c15c6bd48e51"
+        }
+      },
+      "DependsOn": [
+        "EC2RT100DP"
+      ]
+    },
+    "EC2SMZVI": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "EC2VPCZS3T"
+        },
+        "MapPublicIpOnLaunch": "TRUE",
+        "CidrBlock": "192.168.11.0/24",
+        "AvailabilityZone": {
+          "Fn::Select": [
+            "0",
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-SN-PUBa"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "7fc38c9d-36d4-409a-9188-de9ffdd619ab"
+        }
+      },
+      "DependsOn": [
+        "EC2VPCZS3T",
+        "EC2RT100DP"
+      ]
+    },
+    "EC2SRTA18QDV": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "EC2RT100DP"
+        },
+        "SubnetId": {
+          "Ref": "EC2S2VAGH"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f1ee7ab6-d48d-4c74-9f2e-bba6e1551c08"
+        }
+      }
+    },
+    "EC2SRTA6QDE": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "EC2RT100DP"
+        },
+        "SubnetId": {
+          "Ref": "EC2SMZVI"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "cccbf76c-10b9-40df-baa4-6fe50a7ca47a"
+        }
+      }
+    },
+    "EC2I52RW5": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": {
+          "Fn::Select": [
+            "1",
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash\n",
+                "yum update -y\n"
+              ]
+            ]
+          }
+        },
+        "ImageId": "ami-d6cbc1b2",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "EC2S2VAGH"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "EC2SG1OKNO"
+          }
+        ],
+        "KeyName": "kp-hm-aws-london",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-EC2WEB01"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "ad9764c1-d871-4e74-ab29-e04bd28738ae"
+        }
+      },
+      "DependsOn": [
+        "EC2S2VAGH"
+      ]
+    },
+    "EC2SG1OKNO": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-SG-SSH"
+          }
+        ],
+        "GroupDescription": "Allow SSH to client host",
+        "VpcId": {
+          "Ref": "EC2VPCZS3T"
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": "22",
+            "ToPort": "22",
+            "CidrIp": "0.0.0.0/0"
+          },
+          {
+            "IpProtocol": "icmp",
+            "FromPort": "-1",
+            "ToPort": "-1",
+            "CidrIp": "0.0.0.0/0"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        }
+      },
+      "DependsOn": [
+        "EC2VPCZS3T"
+      ]
+    }
+  }
+}
