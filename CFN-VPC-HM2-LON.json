@@ -653,7 +653,7 @@
       },
       "Description": "Installation URL of the phpinfo page EC2I52RW5"
     },
-    "PHPInfoURL1": {
+    "PHPInfoURL2": {
       "Value": {
         "Fn::Join": [
           "",
