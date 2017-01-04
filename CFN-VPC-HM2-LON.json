@@ -167,7 +167,9 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [],
+        "embeds": [
+          "fce81584-db4e-42c0-848f-9db4735788d1"
+        ],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -257,6 +259,7 @@
           "y": 730
         },
         "z": 0,
+        "parent": "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -856,8 +859,17 @@
       "us-east-1": {
         "prod": "ami-9be6f38c"
       },
+      "us-east-2": {
+        "prod": "ami-38cd975d"
+      },
       "us-west-1": {
         "prod": "ami-b73d6cd7"
+      },
+      "us-west-2": {
+        "prod": "ami-1e299d7e"
+      },
+      "ca-central-1": {
+        "prod": "ami-eb20928f"
       },
       "eu-west-1": {
         "prod": "ami-c51e3eb6"
@@ -869,13 +881,22 @@
         "prod": "ami-211ada4e"
       },
       "ap-southeast-1": {
-        "prod": "ami-60f28c32"
+        "prod": "ami-4dd6782e"
       },
       "ap-northeast-1": {
         "prod": "ami-9f0c67f8"
       },
       "ap-northeast-2": {
         "prod": "ami-94bb6dfa"
+      },
+      "ap-southeast-2": {
+        "prod": "ami-28cff44b"
+      },
+      "ap-south-1": {
+        "prod": "ami-9fc7b0f0"
+      },
+      "sa-east-1": {
+        "prod": "ami-bb40d8d7"
       }
     }
   }
