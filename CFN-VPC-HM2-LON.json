@@ -167,9 +167,7 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [
-          "fce81584-db4e-42c0-848f-9db4735788d1"
-        ],
+        "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -259,7 +257,6 @@
           "y": 730
         },
         "z": 0,
-        "parent": "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -564,7 +561,15 @@
             ]
           }
         },
-        "ImageId": "ami-bfe0eadb",
+        "ImageId": {
+          "Fn::FindInMap": [
+            "RegionMap",
+            {
+              "Ref": "AWS::Region"
+            },
+            "prod"
+          ]
+        },
         "InstanceType": "t2.micro",
         "SubnetId": {
           "Ref": "EC2S2VAGH"
@@ -665,7 +670,15 @@
             ]
           }
         },
-        "ImageId": "ami-bfe0eadb",
+        "ImageId": {
+          "Fn::FindInMap": [
+            "RegionMap",
+            {
+              "Ref": "AWS::Region"
+            },
+            "prod"
+          ]
+        },
         "InstanceType": "t2.micro",
         "SubnetId": {
           "Ref": "EC2SMZVI"
