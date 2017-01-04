@@ -167,9 +167,7 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [
-          "fce81584-db4e-42c0-848f-9db4735788d1"
-        ],
+        "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -199,8 +197,8 @@
           "height": 60
         },
         "position": {
-          "x": 450,
-          "y": 710
+          "x": 490,
+          "y": 730
         },
         "z": 0,
         "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
@@ -230,7 +228,7 @@
           "height": 60
         },
         "position": {
-          "x": 200,
+          "x": 110,
           "y": 350
         },
         "z": 0,
@@ -255,11 +253,10 @@
           "height": 60
         },
         "position": {
-          "x": 1090,
+          "x": 1080,
           "y": 730
         },
         "z": 0,
-        "parent": "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -365,7 +362,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-IGW"
+            "Value": "HM2-IGW"
           }
         ]
       },
@@ -394,7 +391,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-SN-PUBb"
+            "Value": "HM2-SN-PUBb"
           }
         ]
       },
@@ -486,7 +483,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-SN-PUBa"
+            "Value": "HM2-SN-PUBa"
           }
         ]
       },
@@ -564,7 +561,7 @@
             ]
           }
         },
-        "ImageId": "ami-d6cbc1b2",
+        "ImageId": "ami-bfe0eadb",
         "InstanceType": "t2.micro",
         "SubnetId": {
           "Ref": "EC2S2VAGH"
@@ -574,11 +571,10 @@
             "Ref": "EC2SG1OKNO"
           }
         ],
-        "KeyName": "kp-hm-aws-london",
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-EC2WEB01"
+            "Value": "HM2-EC2WEB01"
           }
         ]
       },
@@ -597,7 +593,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-SG-SSH"
+            "Value": "HM2-SG-SSH"
           }
         ],
         "GroupDescription": "Allow SSH, HTTP and ICMP to client host",
@@ -666,7 +662,7 @@
             ]
           }
         },
-        "ImageId": "ami-d6cbc1b2",
+        "ImageId": "ami-bfe0eadb",
         "InstanceType": "t2.micro",
         "SubnetId": {
           "Ref": "EC2SMZVI"
@@ -676,11 +672,10 @@
             "Ref": "EC2SG1OKNO"
           }
         ],
-        "KeyName": "kp-hm-aws-london",
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-EC2WEB02"
+            "Value": "HM2-EC2WEB02"
           }
         ]
       },
@@ -758,7 +753,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "HM2-LON-SG-HTTP"
+            "Value": "HM2-SG-HTTP"
           }
         ],
         "GroupDescription": "Allow HTTP",
