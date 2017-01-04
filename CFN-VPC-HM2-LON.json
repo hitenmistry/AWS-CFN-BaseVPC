@@ -42,7 +42,9 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [],
+        "embeds": [
+          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
+        ],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -164,7 +166,9 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [],
+        "embeds": [
+          "fce81584-db4e-42c0-848f-9db4735788d1"
+        ],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -198,6 +202,7 @@
           "y": 710
         },
         "z": 0,
+        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -240,6 +245,37 @@
         },
         "target": {
           "id": "30a2c413-18bc-4101-be3c-9cedd516c67d"
+        },
+        "z": 11
+      },
+      "fce81584-db4e-42c0-848f-9db4735788d1": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 1090,
+          "y": 730
+        },
+        "z": 0,
+        "parent": "7fc38c9d-36d4-409a-9188-de9ffdd619ab",
+        "embeds": [],
+        "ismemberof": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        ],
+        "dependson": [
+          "7fc38c9d-36d4-409a-9188-de9ffdd619ab"
+        ],
+        "isrelatedto": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624"
+        ]
+      },
+      "bb614ce3-e8aa-4923-8ff3-b32ca4f0e380": {
+        "source": {
+          "id": "fce81584-db4e-42c0-848f-9db4735788d1"
+        },
+        "target": {
+          "id": "7fc38c9d-36d4-409a-9188-de9ffdd619ab"
         },
         "z": 11
       }
@@ -537,10 +573,69 @@
       "DependsOn": [
         "EC2VPCZS3T"
       ]
+    },
+    "EC2I1LHDI": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": {
+          "Fn::Select": [
+            "0",
+            {
+              "Fn::GetAZs": ""
+            }
+          ]
+        },
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash\n",
+                "yum update -y\n",
+                "yum install -y httpd php mysql-server php-mysqlnd\n",
+                "service httpd start\n",
+                "chkconfig httpd on\n",
+                "groupadd www\n",
+                "usermod -a -G www ec2-user\n",
+                "chown -R root:www /var/www\n",
+                "chmod 2775 /var/www\n",
+                "find /var/www -type d -exec chmod 2775 {} +\n",
+                "find /var/www -type f -exec chmod 0664 {} +\n",
+                "echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php\n"
+              ]
+            ]
+          }
+        },
+        "ImageId": "ami-d6cbc1b2",
+        "InstanceType": "t2.micro",
+        "SubnetId": {
+          "Ref": "EC2SMZVI"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "EC2SG1OKNO"
+          }
+        ],
+        "KeyName": "kp-hm-aws-london",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "HM2-LON-EC2WEB02"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "fce81584-db4e-42c0-848f-9db4735788d1"
+        }
+      },
+      "DependsOn": [
+        "EC2SMZVI"
+      ]
     }
   },
   "Outputs": {
-    "PHPInfoURL": {
+    "PHPInfoURL1": {
       "Value": {
         "Fn::Join": [
           "",
@@ -556,9 +651,9 @@
           ]
         ]
       },
-      "Description": "Installation URL of the phpinfo page"
+      "Description": "Installation URL of the phpinfo page EC2I52RW5"
     },
-    "WebsiteURL": {
+    "PHPInfoURL1": {
       "Value": {
         "Fn::Join": [
           "",
@@ -566,13 +661,15 @@
             "http://",
             {
               "Fn::GetAtt": [
-                "EC2I52RW5",
+                "EC2I1LHDI",
                 "PublicIp"
               ]
-            }
+            },
+            "/phpinfo.php"
           ]
         ]
-      }
+      },
+      "Description": "Installation URL of the phpinfo page EC2I1LHDI"
     }
   }
 }
