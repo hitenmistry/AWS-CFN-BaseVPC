@@ -348,7 +348,23 @@
           "x": 670,
           "y": 500
         },
-        "z": 0
+        "z": 0,
+        "embeds": [],
+        "dependson": [
+          "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
+        ],
+        "isrelatedto": [
+          "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
+        ]
+      },
+      "40097030-699a-4a73-afff-b2cf378c8de8": {
+        "source": {
+          "id": "6fd71e31-3e2a-4497-88d2-f7c519a50177"
+        },
+        "target": {
+          "id": "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
+        },
+        "z": 11
       }
     }
   },
@@ -815,7 +831,7 @@
         "Comment": "alias targeted to ELBLB25S68 LoadBalancer.",
         "RecordSets": [
           {
-            "Name": "london.hmistry.co.uk.",
+            "Name": "eu-west-2.hmistry.co.uk.",
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": {
@@ -838,7 +854,10 @@
         "AWS::CloudFormation::Designer": {
           "id": "6fd71e31-3e2a-4497-88d2-f7c519a50177"
         }
-      }
+      },
+      "DependsOn": [
+        "ELBLB25S68"
+      ]
     }
   },
   "Outputs": {
@@ -895,6 +914,19 @@
         ]
       },
       "Description": "Elastic Load Balancer address"
+    },
+    "FQDN": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            "london.hmistry.co.uk",
+            "/phpinfo.php"
+          ]
+        ]
+      },
+      "Description": "Route53 FQDN"
     }
   },
   "Mappings": {
