@@ -338,6 +338,17 @@
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d"
         ]
+      },
+      "6fd71e31-3e2a-4497-88d2-f7c519a50177": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 670,
+          "y": 500
+        },
+        "z": 0
       }
     }
   },
@@ -796,6 +807,38 @@
       "DependsOn": [
         "EC2VPCZS3T"
       ]
+    },
+    "R53RSGEMLF": {
+      "Type": "AWS::Route53::RecordSetGroup",
+      "Properties": {
+        "HostedZoneName": "hmistry.co.uk.",
+        "Comment": "alias targeted to ELBLB25S68 LoadBalancer.",
+        "RecordSets": [
+          {
+            "Name": "london.hmistry.co.uk.",
+            "Type": "A",
+            "AliasTarget": {
+              "HostedZoneId": {
+                "Fn::GetAtt": [
+                  "ELBLB25S68",
+                  "CanonicalHostedZoneNameID"
+                ]
+              },
+              "DNSName": {
+                "Fn::GetAtt": [
+                  "ELBLB25S68",
+                  "DNSName"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6fd71e31-3e2a-4497-88d2-f7c519a50177"
+        }
+      }
     }
   },
   "Outputs": {
