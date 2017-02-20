@@ -861,8 +861,12 @@
     }
   },
   "Outputs": {
-    "MyStacksRegion" : { "Value" : { "Ref" : "AWS::Region" },
-    "Description": "AWS Region"},
+    "MyStacksRegion": {
+      "Value": {
+        "Ref": "AWS::Region"
+      },
+      "Description": "AWS Region"
+    },
     "PHPInfoURL1": {
       "Value": {
         "Fn::Join": [
