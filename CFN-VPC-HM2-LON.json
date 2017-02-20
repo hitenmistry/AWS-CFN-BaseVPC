@@ -861,6 +861,8 @@
     }
   },
   "Outputs": {
+    "MyStacksRegion" : { "Value" : { "Ref" : "AWS::Region" },
+    "Description": "AWS Region"},
     "PHPInfoURL1": {
       "Value": {
         "Fn::Join": [
@@ -921,7 +923,7 @@
           "",
           [
             "http://",
-            "london.hmistry.co.uk",
+            "eu-west-2.hmistry.co.uk",
             "/phpinfo.php"
           ]
         ]
