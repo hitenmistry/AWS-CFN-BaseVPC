@@ -831,7 +831,18 @@
         "Comment": "alias targeted to ELBLB25S68 LoadBalancer.",
         "RecordSets": [
           {
-            "Name": "eu-west-2.hmistry.co.uk.",
+            "Name": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Ref": "AWS::Region"
+                  },
+                  ".",
+                  "hmistry.co.uk"
+                ]
+              ]
+            },
             "Type": "A",
             "AliasTarget": {
               "HostedZoneId": {
