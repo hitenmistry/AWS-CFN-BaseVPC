@@ -43,9 +43,7 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [
-          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
-        ],
+        "embeds": [],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -203,7 +201,6 @@
           "y": 730
         },
         "z": 0,
-        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -365,6 +362,18 @@
           "id": "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
         },
         "z": 11
+      },
+      "b38b271a-d164-4ba1-b657-4ca6645efeef": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 40,
+          "y": 620
+        },
+        "z": 0,
+        "embeds": []
       }
     }
   },
@@ -869,6 +878,47 @@
       "DependsOn": [
         "ELBLB25S68"
       ]
+    },
+    "ASLC2VPBN": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "ImageId": {
+          "Fn::FindInMap": [
+            "RegionMap",
+            {
+              "Ref": "AWS::Region"
+            },
+            "prod"
+          ]
+        },
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash\n",
+                "yum update -y\n",
+                "yum install -y httpd php mysql-server php-mysqlnd\n",
+                "service httpd start\n",
+                "chkconfig httpd on\n",
+                "groupadd www\n",
+                "usermod -a -G www ec2-user\n",
+                "chown -R root:www /var/www\n",
+                "chmod 2775 /var/www\n",
+                "find /var/www -type d -exec chmod 2775 {} +\n",
+                "find /var/www -type f -exec chmod 0664 {} +\n",
+                "echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php\n"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b38b271a-d164-4ba1-b657-4ca6645efeef"
+        }
+      }
     }
   },
   "Outputs": {
