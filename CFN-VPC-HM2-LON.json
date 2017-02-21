@@ -387,7 +387,14 @@
           "x": 255.66666091282855,
           "y": 595.3607589660162
         },
-        "z": 0
+        "z": 0,
+        "embeds": [],
+        "isconnectedto": [
+          "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
+        ],
+        "isassociatedwith": [
+          "b38b271a-d164-4ba1-b657-4ca6645efeef"
+        ]
       }
     }
   },
@@ -945,6 +952,8 @@
         },
         "MinSize": "2",
         "MaxSize": "2",
+        "Cooldown": "600",
+        "DesiredCapacity": "2",
         "LoadBalancerNames": [
           {
             "Ref": "ELBLB25S68"
