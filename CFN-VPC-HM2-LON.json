@@ -43,7 +43,9 @@
         },
         "z": 0,
         "parent": "30a2c413-18bc-4101-be3c-9cedd516c67d",
-        "embeds": [],
+        "embeds": [
+          "ad9764c1-d871-4e74-ab29-e04bd28738ae"
+        ],
         "dependson": [
           "30a2c413-18bc-4101-be3c-9cedd516c67d",
           "3a28cc68-37c3-492d-9d11-6c038506aed3"
@@ -201,6 +203,7 @@
           "y": 730
         },
         "z": 0,
+        "parent": "67fabbdd-4f0c-4c64-abc7-ea8c0e189c76",
         "embeds": [],
         "ismemberof": [
           "409a18f6-4d1b-422b-85fb-c60ad8826624"
@@ -374,6 +377,17 @@
         },
         "z": 0,
         "embeds": []
+      },
+      "546c4798-d27c-4b34-bd0a-cd52b287b0ae": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 255.66666091282855,
+          "y": 595.3607589660162
+        },
+        "z": 0
       }
     }
   },
@@ -917,6 +931,29 @@
       "Metadata": {
         "AWS::CloudFormation::Designer": {
           "id": "b38b271a-d164-4ba1-b657-4ca6645efeef"
+        }
+      }
+    },
+    "ASASG3WFIA": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+      "Properties": {
+        "AvailabilityZones": {
+          "Fn::GetAZs": ""
+        },
+        "LaunchConfigurationName": {
+          "Ref": "ASLC2VPBN"
+        },
+        "MinSize": "2",
+        "MaxSize": "2",
+        "LoadBalancerNames": [
+          {
+            "Ref": "ELBLB25S68"
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "546c4798-d27c-4b34-bd0a-cd52b287b0ae"
         }
       }
     }
