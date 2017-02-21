@@ -376,25 +376,22 @@
           "y": 620
         },
         "z": 0,
-        "embeds": []
+        "embeds": [],
+        "ismemberof": [
+          "409a18f6-4d1b-422b-85fb-c60ad8826624",
+          "75795438-9916-408f-b9c7-306e65fb4c5e"
+        ]
       },
-      "546c4798-d27c-4b34-bd0a-cd52b287b0ae": {
+      "cb5cab26-95df-4577-a848-4cc8080dedac": {
         "size": {
           "width": 60,
           "height": 60
         },
         "position": {
-          "x": 255.66666091282855,
-          "y": 595.3607589660162
+          "x": 247.04027331661487,
+          "y": 592.8960767956694
         },
-        "z": 0,
-        "embeds": [],
-        "isconnectedto": [
-          "652dc0e2-2d3e-4a43-9e0e-f0c7f256e065"
-        ],
-        "isassociatedwith": [
-          "b38b271a-d164-4ba1-b657-4ca6645efeef"
-        ]
+        "z": 0
       }
     }
   },
@@ -904,6 +901,12 @@
       "Type": "AWS::AutoScaling::LaunchConfiguration",
       "Properties": {
         "InstanceType": "t2.micro",
+        "AssociatePublicIpAddress": "True",
+        "SecurityGroups": [
+          {
+            "Ref": "EC2SG4EALQ"
+          }
+        ],
         "ImageId": {
           "Fn::FindInMap": [
             "RegionMap",
@@ -941,19 +944,19 @@
         }
       }
     },
-    "ASASG3WFIA": {
+    "ASASG28WNE": {
       "Type": "AWS::AutoScaling::AutoScalingGroup",
       "Properties": {
-        "AvailabilityZones": {
-          "Fn::GetAZs": ""
+        "VPCZoneIdentifier": {
+          "Ref": "EC2VPCZS3T"
         },
         "LaunchConfigurationName": {
           "Ref": "ASLC2VPBN"
         },
         "MinSize": "2",
         "MaxSize": "2",
-        "Cooldown": "600",
         "DesiredCapacity": "2",
+        "Cooldown": "300",
         "LoadBalancerNames": [
           {
             "Ref": "ELBLB25S68"
@@ -962,7 +965,7 @@
       },
       "Metadata": {
         "AWS::CloudFormation::Designer": {
-          "id": "546c4798-d27c-4b34-bd0a-cd52b287b0ae"
+          "id": "cb5cab26-95df-4577-a848-4cc8080dedac"
         }
       }
     }
